@@ -173,6 +173,7 @@ class JSBSimRunner(Runner):
     @torch.no_grad()
     def render(self):
         logging.info("\nStart render ...")
+        print("=============??????????????")
         render_episode_rewards = 0
         render_obs = self.envs.reset()
         render_masks = np.ones((1, *self.buffer.masks.shape[2:]), dtype=np.float32)
