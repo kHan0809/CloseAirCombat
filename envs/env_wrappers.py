@@ -8,7 +8,6 @@ from abc import ABC, abstractmethod
 from multiprocessing import Pipe, Process
 from multiprocessing.connection import Connection
 
-
 class CloudpickleWrapper(object):
     """
     Uses cloudpickle to serialize contents (otherwise multiprocessing tries to use pickle)

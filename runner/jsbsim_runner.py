@@ -51,6 +51,7 @@ class JSBSimRunner(Runner):
                 # Obser reward and next obs
                 obs, rewards, dones, infos = self.envs.step(actions)
 
+
                 # Extra recorded information
                 for info in infos:
                     if 'heading_turn_counts' in info:

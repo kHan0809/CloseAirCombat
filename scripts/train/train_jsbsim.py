@@ -1,3 +1,13 @@
+CUDA_VISIBLE_DEVICES=1
+# --env-name "SingleCombat" --algorithm-name "ppo" --scenario-name "1v1/NoWeapon/Selfplay" --experiment-name "v1" \
+# --seed 1 --n-training-threads 1 --n-rollout-threads 2 --cuda --log-interval 1 --save-interval 1 \
+# --use-selfplay --selfplay-algorithm "fsp" --n-choose-opponents 1 \
+# --use-eval --n-eval-rollout-threads 1 --eval-interval 1 --eval-episodes 1 \
+# --num-mini-batch 5 --buffer-size 3000 --num-env-steps 1e8 \
+# --lr 3e-4 --gamma 0.99 --ppo-epoch 4 --clip-params 0.2 --max-grad-norm 2 --entropy-coef 1e-3 \
+# --hidden-size "128 128" --act-hidden-size "128 128" --recurrent-hidden-size 128 --recurrent-hidden-layers 1 --data-chunk-length 8 \
+# --user-name "jyh"
+
 #!/usr/bin/env python
 import sys
 import os
@@ -145,7 +155,6 @@ def main(args):
         "device": device,
         "run_dir": run_dir
     }
-
     # run experiments
     if all_args.env_name == "MultipleCombat":
         runner = ShareJSBSimRunner(config)
